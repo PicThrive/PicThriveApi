@@ -4,7 +4,7 @@ Making Requests
 Auth
 ----
 
-When making requests to the PicThrive servers you will need to set the **Authorization** header to the **access_token** received in the OAuth flow::
+When making requests to PicThrive's servers you will need to set the **Authorization** header to the **access_token** received in the OAuth flow::
 
     Header:
         Authorization: Bearer <access_token>
@@ -23,7 +23,7 @@ PicThrive's Api can be accessed from::
 Displaying Images
 -----------------
 
-All image urls returned by the API do not include the CDN hostname or protocol. The following prefix can be added to obtain access to all our hosted images and logos.::
+All image URLs returned by the API do not include the CDN hostname or protocol. The following prefix can be added to obtain access to all our hosted images and logos.::
 
     https://d1rj07wouwybr9.cloudfront.net/
 

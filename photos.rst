@@ -1,7 +1,7 @@
 Photos
 ======
 
-The following endpoint describe manipulations on single photo items.
+The following endpoint describes manipulations on single photo items.
 
 
 /v1/Photo/<photo uuid>
@@ -20,16 +20,16 @@ Fields
 
     * **OwnerId**: Owner UUID.
     * **GroupId**: Group UUID this photo belongs to.
-    * **PhotoId**: Photo UUUID.
+    * **PhotoId**: Photo UUID.
     * **Created**: Unix time this photo entry was created at.
-    * **Medium**: The url suffix that the 'Medium' sized photo is located at.
-    * **Original**: The url suffix that the 'Original' sized photo is located at.
-    * **Small**: The url suffix that the 'Small' sized photo is located at.
-    * **Watermark**: The url suffix that the 'Medium' Watermarked photo is located at.
-    * **WatermarkSmall**: The url suffix that the 'Small' Watermarked photo is located at.
+    * **Medium**: The URL suffix that the 'Medium' sized photo is located at.
+    * **Original**: The URL suffix that the 'Original' sized photo is located at.
+    * **Small**: The URL suffix that the 'Small' sized photo is located at.
+    * **Watermark**: The URL suffix that the 'Medium' Watermarked photo is located at.
+    * **WatermarkSmall**: The URL suffix that the 'Small' Watermarked photo is located at.
     * **Deleted**: Optional. True if this photo has been deleted.
     * **SortOrder**: The Sorting order of this photo. Tends to be the Filename of the photo.
-    * **Ratio**: The size ratio of this photo. (Width / Height)
+    * **Ratio**: The size ratio of this photo (Width / Height).
 
 Example Returns (200 OK)::
 

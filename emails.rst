@@ -1,7 +1,7 @@
 Emails
 ======
 
-The following endpoint allows for emails to be sent to customers, and for their status to be checked.
+The following endpoint allows for emails to be sent to customers, and for the status to be checked.
 
 /v1/Email/
 ----------
@@ -17,12 +17,12 @@ Fields
 
     * **Messages**: A list of emails to send.
 
-        * **To**: Email to send to.
+        * **To**: Email address to send to.
         * **Type**: Type of email being sent. {"tokenAndGroup", "group", "token"}
-        * **BrandId**: The Brand this email is being sent from.
-        * **Token**: Used in "tokenAndGroup" or "token". This specifies their purchase token.
-        * **GroupId**: Used in "group" or "tokenAndGroup". Specifies the GroupId we want to direct the customer to.
-        * **NumPhotos**: Used in "tokenAndGroup" or "token". Specifies the # of photos they received. -1 => unlimited.
+        * **BrandId**: The Brand this email is sent from.
+        * **Token**: Used in "tokenAndGroup" or "token". This specifies a purchase token.
+        * **GroupId**: Used in "group" or "tokenAndGroup". Specifies the GroupId you want to direct the customer to.
+        * **NumPhotos**: Used in "tokenAndGroup" or "token". Specifies the # of photos a customer receives. -1 => unlimited.
 
 Example PostData::
 
@@ -88,20 +88,20 @@ Fields
 
         * **Email**: The email address that this was sent to.
         * **Type**: The type of email that was sent: {"tokenAndGroup", "group", "token", "purchase"}
-        * **MessageId**: The uuid of this email message.
+        * **MessageId**: The UUID of this email message.
         * **SentAt**: The unix time this email was sent at.
         * **LastUpdated**: The unix time this email was last updated at. Eg. Delivered notification.
         * **State**: The state of this email: {"sent", "delivered", "bounced", "complaint"}
-        * **BrandId**: The Brand uuid this email was sent from.
-        * **OwnerId**: The Owner uuid this email was sent from.
-        * **MsgDetails**: Detail about how the message was sent, and its content.
+        * **BrandId**: The Brand UUID this email was sent from.
+        * **OwnerId**: The Owner UUID this email was sent from.
+        * **MsgDetails**: Details about how the message was sent, and its content.
 
             * **To**: Email to send to.
             * **Type**: Type of email being sent. {"tokenAndGroup", "group", "token", "purchase"}
             * **BrandId**: The Brand this email is being sent from.
-            * **Token**: Used in "tokenAndGroup" or "token". This specifies their purchase token.
+            * **Token**: Used in "tokenAndGroup" or "token". This specifies a purchase token.
             * **GroupId**: Used in "group" or "tokenAndGroup". Specifies the GroupId we want to direct the customer to.
-            * **NumPhotos**: Used in "tokenAndGroup" or "token". Specifies the # of photos they received. -1 => unlimited.
+            * **NumPhotos**: Used in "tokenAndGroup" or "token". Specifies the # of photos a customer received. -1 => unlimited.
             * **OrderId**: Used in "purchase". UUID of the customer's order.
 
         * **ComplaintType**: Type of complaint.

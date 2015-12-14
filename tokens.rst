@@ -7,7 +7,7 @@ Tokens
 
 GET
 ~~~
-Returns a list of generated tokens in this account.
+Returns a list of generated tokens in this account. Tokens can be redeemed for photos.
 
 Query Params
 ^^^^^^^^^^^^
@@ -116,7 +116,7 @@ Example Returns (201 Created)::
 
 GET
 ~~~
-Returns a info about the specified token.
+Returns info about the specified token.
 
 Returns
 ^^^^^^^
@@ -128,9 +128,9 @@ Fields
     * **TypeAndModified**: Type + Unix time this token was last updated.
     * **TypeAndNum**: Type + # of photos in this token.
     * **Token**: The actual token string.
-    * **GroupId**: Optional. If this token is linked to a group, this will be specified.
-    * **GroupToken**: Optional. If this token is linked to a group, this will be specified.
-    * **LockedToGroup**: Optional. If set to true this token can only be used on the given group.
+    * **GroupId**: Optional. If this token is linked to a Group, this will be specified.
+    * **GroupToken**: Optional. If this token is linked to a Group, this will be specified.
+    * **LockedToGroup**: Optional. If set to true this token can only be used on the given Group.
     * **NumPhotos**: The number of photos this token is worth. -1 => unlimited.
     * **OrderId**: Optional. Only set if the token has been redeemed. Will specify the Order Id.
 
@@ -151,7 +151,7 @@ Example Return (200 OK)::
 
 PUT
 ~~~
-Update a tokens state. A token can not legally transition out of 'used'.
+Update a token's state. A token can not legally transition out of 'used'.
 
 PostData
 ^^^^^^^^
@@ -173,4 +173,4 @@ Returns
 
 Fields
 
-    * **Error**: Optional error string
+    * **Error**: Optional error string.

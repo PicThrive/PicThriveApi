@@ -1,7 +1,7 @@
 Groups
 ======
 
-Groups are the Owner visible arrangement of 'Albums'. They contain a set photos that can be sold. Each group has 1 parent Brand.
+Groups are the Owner visible arrangement of 'Albums'. A Group contains a set of photos that can be sold. Each Group has 1 parent Brand.
 
 
 /v1/Group/
@@ -11,7 +11,7 @@ Groups are the Owner visible arrangement of 'Albums'. They contain a set photos 
 
 GET
 ~~~
-Returns the list of groups for an owner on the given day.
+Returns the list of Groups for an owner on the given day.
 
 Query Params
 ^^^^^^^^^^^^
@@ -102,7 +102,7 @@ Example Return (201 Created)::
 
 GET
 ~~~
-Performs a very simple search for the given group Token.
+Performs a basic search for the given group Token.
 
 Query Params
 ^^^^^^^^^^^^
@@ -162,7 +162,7 @@ Fields
     * **Name**: Name of this group.
     * **Token**: Token / Short ID of this group.
     * **Count**: Number of photos in the group.
-    * **Thumb**: The url suffix of the thumbnail of this group.
+    * **Thumb**: The URL suffix of the thumbnail of this group.
     * **BrandId**: Brand UUID that this group belongs to.
     * **WhenUnix**: Date this group was created for.
     * **Deleted**: Optional. Boolean if this group was deleted.
@@ -193,7 +193,7 @@ PostData
 
 Fields
 
-    * **Thumb**: Optional. The thumbnail to set. If empty not changed.
+    * **Thumb**: Optional. The image thumbnail to set. If empty not changed.
     * **Name**: Optional. Name to set on the group. If empty not changed.
     * **BrandId**: Optional. The Brand to associate with this group. If empty not changed.
 
@@ -252,7 +252,7 @@ Fields
 
     * **Photos**: List of photos to include in the zip file.
 
-        * **File**: The url suffix of the file to zip.
+        * **File**: The URL suffix of the file to zip.
         * **FileName**: What to name this file.
 
 Example PostData::
@@ -276,7 +276,7 @@ Returns
 
 Fields
 
-    * **Status**: Url to check zip progress at. Note: this is a cloudconvert url. See https://cloudconvert.com/apidoc#status
+    * **Status**: URL to check zip progress at. Note: this is a cloudconvert url. See https://cloudconvert.com/apidoc#status
     * **Error**: Optional error string.
 
 Example Return (201 Created)::
@@ -292,7 +292,7 @@ Example Return (201 Created)::
 
 GET
 ~~~
-Returns all the photos inside the given group. Not if not authorized, then "Photos" is returned as "Public" and some fields are hidden.
+Returns all the photos inside the given group. If not authorized, then "Photos" are returned as "Public" and some fields are hidden.
 
 
 Returns
@@ -330,7 +330,7 @@ Example Return (200 OK)::
 
 POST
 ~~~~
-Request to add photos to the given group. This is best done in batches of 25. The returned list provides a url to for each photo to be uploaded to. **Note**: The number of requested photos may not match the number of returned items.
+Request to add photos to the given group. This is best done in batches of 25. The returned list provides a url for each photo to be uploaded to. **Note**: The number of requested photos may not match the number of returned items.
 
 
 PostData
@@ -356,8 +356,8 @@ Fields
     * **AddedPhotos**: A list of upload metadata. May not match the # of photos requested.
 
         * **PhotoId**: The UUID of the photo.
-        * **UploadUrl**: The url to PUT the multipart upload. See :ref:`Upload Format<UploadFormat>` for how to correctly upload content.
-        * **Expires**: The time at which the upload url expires and cannot be used anymore.
+        * **UploadUrl**: The URL to PUT the multipart upload. See :ref:`Upload Format<UploadFormat>` for how to correctly upload content.
+        * **Expires**: The time at which the upload URL expires and cannot be used anymore.
 
     * **Error**: Optional error string.
 

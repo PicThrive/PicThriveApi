@@ -1,6 +1,6 @@
 Owner
 =====
-Details about the root account holder, and their preferences and settings.
+Details about the root account holder, including their preferences and settings.
 
 /Owner/
 -------
@@ -8,7 +8,7 @@ Details about the root account holder, and their preferences and settings.
 GET
 ~~~
 
-Returns details about the owner account.
+Returns details about the Owner account.
 
 Returns
 ^^^^^^^
@@ -16,9 +16,9 @@ Returns
 Fields
 
     * **OwnerId**: Owner UUID.
-    * **Created**: Unix time this account was created at.
+    * **Created**: Unix time this account was created.
     * **StripeSubStatus**: The status of this account: {"trialing", "active", "past_due", "canceled", "unpaid"}
-    * **CurrentPeriodEnd**: Unix time this account's period ends at.
+    * **CurrentPeriodEnd**: Unix time this account's period ends.
     * **CardDetails**: Optional. String description of attached card.
     * **LastName**: Optional.
     * **FirstName**: Optional.
@@ -45,7 +45,7 @@ Example Returns (200 OK)::
 
 PUT
 ~~~
-Updates an owner.
+Updates an Owner.
 
 PostData
 ^^^^^^^^
@@ -101,7 +101,7 @@ Fields
 
 GET
 ~~~
-Returns details about the given invoice. Use 'upcoming' as the invoice id for retrieving the upcoming invoice
+Returns details about the given invoice. Use 'upcoming' as the invoice id for retrieving the upcoming invoice.
 
 
 .. _MoreChk:
@@ -143,7 +143,7 @@ Fields
 
 GET
 ~~~
-Returns the link to download the invoice PDF from. Not all invoices will have PDFs.
+Returns the link to download a PDF invoice. Not all invoices will have PDFs.
 
 Query Params
 ^^^^^^^^^^^^
@@ -205,7 +205,7 @@ Example Returns (200 OK)::
 
 GET
 ~~~
-Returns the all the connected stripe account's balances.
+Returns all the connected stripe accounts' balances.
 
 Returns
 ^^^^^^^

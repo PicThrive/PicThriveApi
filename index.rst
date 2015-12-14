@@ -3,10 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PicThrive Api's documentation!
+Welcome to PicThrive's API Documentation!
 =========================================
 
-To request access to PicThrive's Api please contact info@picthrive.com.
+Want to integrate PicThrive to bolster your service or build your own photo Apps?
+
+Request access to PicThrive's API by contacting us at info@picthrive.com.
 
 .. _user-docs:
 

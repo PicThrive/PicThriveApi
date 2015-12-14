@@ -1,7 +1,7 @@
 Brands
 ======
 
-The following endpoint describes manipulations of a brand.
+The following endpoint describes manipulations of a Brand. A Brand has its own store, links, logos and campaigns.
 
 
 /v1/Brand/
@@ -144,7 +144,7 @@ Fields
         * **TwitterUrl**: Optional. Url to their Twitter page.
         * **GooglePlusUrl**: Optional. Url to their Google+ page.
 
-    * **Review**: Optional. Set of review based links.
+    * **Review**: Optional. Set of review based links to TripAdvisor and Google+.
 
         * **TripAdvisorUrl**: Optional. Link to their TripAdvisor page.
 
@@ -158,7 +158,7 @@ Fields
 
         * **Mode**: Three possible values { off, flat, grad }
         * **Flat**: Only present if **Mode** is **flat**. The flat cost in cents for each photo.
-        * **Currency**: The currency to charge in. { "CAD", "USD" }
+        * **Currency**: The currency to charge in { "CAD", "USD" }
         * **Levels**: Only present if **Mode** is **grad**. The set of graduated levels of pricing.
 
             * **Level**: The number of photos. <= this value.
@@ -176,7 +176,7 @@ Fields
     * **Stripe**: Optional. Describes their selected account. Does not manage the Stripe credentials.
 
         * **Account**: The selected Account Id.
-        * **AccountName**: The selected Account name.
+        * **AccountName**: The selected Account Name.
 
     * **Campaign**: Optional. Info about which campaign is currently running.
 
@@ -192,7 +192,7 @@ Fields
 
     * **AdsUpdated**: Optional. Unix time of the last udpate to ads.
     * **GoogleRemarketingCode**: Optional. Google Remarketing code.
-    * **FacebookRemarketingCode**: Optional. Facebook Remarketing code.
+    * **FacebookRemarketingCode**: Optional. Facebook Retargeting code.
     * **RemarketingUpdated**: Optional. Unix time of last remarketing update.
 
 
@@ -282,7 +282,7 @@ Fields
         * **TwitterUrl**: Optional. Url to their Twitter page. Set to "" to delete.
         * **GooglePlusUrl**: Optional. Url to their Google+ page. Set to "" to delete.
 
-    * **Review**: Optional. Set of review based links.
+    * **Review**: Optional. Set of review based links to TripAdvisor and Google+.
 
         * **TripAdvisorUrl**: Optional. Link to their TripAdvisor page. Set to "" to delete.
 
@@ -311,7 +311,7 @@ Fields
     * **Stripe**: Optional. Describes their selected account. Does not manage the Stripe credentials.
 
         * **Account**: The selected Account Id.
-        * **AccountName**: The selected Account name.
+        * **AccountName**: The selected Account Name.
 
     * **Campaign**: Optional. Info about which campaign is currently running. Set 'Type' to 'Delete' to remove campaigns.
 
@@ -320,12 +320,12 @@ Fields
 
     * **Ads**: Optional. List of banner ads to run.
 
-        * **Chance**: The chance of running this add. [0.0 - 1.0]
+        * **Chance**: The chance of this ad running. [0.0 - 1.0]
         * **ImageBase64**: Base64 encoded image to use as the ad.
         * **Link**: The link to navigate to when clicking the ad.
 
     * **GoogleRemarketingCode**: Optional. Google Remarketing code.
-    * **FacebookRemarketingCode**: Optional. Facebook Remarketing code.
+    * **FacebookRemarketingCode**: Optional. Facebook Retargeting code.
 
 Example Returns (200 OK)::
 
@@ -399,7 +399,7 @@ Example Returns (200 OK)::
 
 POST
 ~~~~
-Adds a email to the Brand's subscription list.
+Adds an email to the Brand's subscription list.
 
 PostData
 ^^^^^^^^
