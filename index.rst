@@ -28,6 +28,7 @@ Request access to PicThrive's API by contacting us at info@picthrive.com.
    emails
    groups
    owner
+   purchase
    photos
    tokens
 
