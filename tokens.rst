@@ -48,6 +48,7 @@ Example Return (200 OK)::
         ]
     }
 
+.. _PostToken:
 
 POST
 ~~~~
@@ -60,7 +61,7 @@ PostData
 Fields
 
     * **Count**: The number of tokens to generate.
-    * **NumPhotos**: The photo value of the token.
+    * **NumPhotos**: The photo value of the token. -1 means unlimited, and forces LockedToGroup to true.
     * **LockedToGroup**: If the token should be locked to be used in a single group.
     * **GroupId**: Optional. If the Token should link to this group.
     * **GroupToken**: Must be specified if and only if GroupId is specified. Must be that Group's Token/Short Id.

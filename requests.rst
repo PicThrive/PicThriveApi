@@ -1,3 +1,5 @@
+.. _MakingRequests:
+
 Making Requests
 ===============
 

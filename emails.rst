@@ -6,6 +6,8 @@ The following endpoint allows for emails to be sent to customers, and for the st
 /v1/Email/
 ----------
 
+.. _PostEmail:
+
 POST
 ~~~~
 Sends an email.

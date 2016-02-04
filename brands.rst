@@ -7,6 +7,8 @@ The following endpoint describes manipulations of a Brand. A Brand has its own s
 /v1/Brand/
 ----------
 
+.. _GetBrands:
+
 GET
 ~~~
 

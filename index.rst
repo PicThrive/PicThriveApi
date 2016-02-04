@@ -18,6 +18,7 @@ Request access to PicThrive's API by contacting us at info@picthrive.com.
 
    oauth
    requests
+   photosale
 
 
 .. toctree::
