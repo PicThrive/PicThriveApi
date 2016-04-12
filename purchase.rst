@@ -11,7 +11,7 @@ POST
 
 Create a purchase through Stripe or via Tokens. See `Stripe.js <https://stripe.com/docs/stripe.js>`_ to on how to collect Payment through Stripe. Use our Stripe Publishable Key::
 
-    pk_live_kqt5cDDw5Dvaqq0RdtThcyl8
+    pk_live_N4MLfAa4QdqxZtFbQF22N9h8
 
 
 ..  _makePurchase:
