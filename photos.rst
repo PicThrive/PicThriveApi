@@ -30,6 +30,8 @@ Fields
     * **Deleted**: Optional. True if this photo has been deleted.
     * **SortOrder**: The Sorting order of this photo. Tends to be the Filename of the photo.
     * **Ratio**: The size ratio of this photo (Width / Height).
+    * **Region**: The region this photo is stored in. Useful to tell you how to display it. See Making Requests to find how to map regions.
+    * **Hue**: The overal 'color' code of the photo.
 
 Example Returns (200 OK)::
 
@@ -45,7 +47,8 @@ Example Returns (200 OK)::
         "WatermarkSmall": "/asdfsaf/sdfasf.jpg",
         "Deleted": false,
         "SortOrder": "IMG_01",
-        "Ratio": 1.5
+        "Ratio": 1.5,
+        "Region": "picthrive-dyn"
     }
 
 DELETE
