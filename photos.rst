@@ -68,3 +68,33 @@ Example Returns (200 OK)::
     {
         "Error": "Error string"
     }
+
+PUT
+~~~
+Update a photo, to copy or move it to another album.
+
+PostData
+^^^^^^^^
+Fields
+
+    * **GroupId**: The group to move or copy the photo to
+    * **DoCopy**: True if the photo should be copied. False (default) if the photo should be moved.
+    
+Example PostData::
+
+   {
+      "GroupId": "<group unique id>",
+      "DoCopy": false
+   }
+
+Returns
+^^^^^^^
+
+Example Returns (200 OK)::
+
+   {
+      "Error": "Error string",
+      "PhotoId: "<new photo uuid>"
+   }
+
+
